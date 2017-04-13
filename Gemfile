@@ -69,6 +69,7 @@ gem 'carrierwave'
 gem "mini_magick"
 gem 'fog-aws'
 gem 'rollbar'
+gem 'omniauth'
 gem 'devise_token_auth', github: "lynndylanhurley/devise_token_auth"
 gem 'actioncable'
 gem 'redis'
