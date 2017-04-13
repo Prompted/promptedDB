@@ -6,20 +6,19 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-  config.middleware.use Rack::Cors do
-      allow do
-        origins '*'
-        resource '*',
-          :headers => :any,
-          :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-          :methods => [:get, :post, :patch, :options, :delete, :put]
-      end
-  end
 
 module PromptedDB
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+
+    config.middleware.use Rack::Cors do
+        allow do
+          origins '*'
+          resource '*',
+            :headers => :any,
+            :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+            :methods => [:get, :post, :patch, :options, :delete, :put]
+        end
+    end
+
   end
 end
