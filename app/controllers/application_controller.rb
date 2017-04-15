@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   #include DeviseTokenAuth::Concerns::SetUserByToken
   #protect_from_forgery with: :null_session
 
-  protect_from_forgery with: :null_session
+  protect_from_forgery with: :null_session, if: ->{request.format.json?}
 
 before_filter :configure_permitted_parameters, if: :devise_controller?
 
