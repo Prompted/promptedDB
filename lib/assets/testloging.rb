@@ -1,7 +1,7 @@
 require "HTTParty"
 require 'pry'
 
-resp = HTTParty.post("http://localhost:3000/auth",
+resp = HTTParty.post("http://Prompted-db.herokuapp.com/auth",
     :query => { :email => "jtjordan16@gmail.com",
                 :password => "hunter2",
                 :password_confirmation => "hunter2",
