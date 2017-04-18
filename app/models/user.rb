@@ -5,4 +5,6 @@ class User < ApplicationRecord
             #:confirmable, :omniauthable
     include DeviseTokenAuth::Concerns::User
 
+    validates_uniqueness_of :screen_name
+
 end
