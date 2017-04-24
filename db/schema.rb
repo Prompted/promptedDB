@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418202312) do
+ActiveRecord::Schema.define(version: 20170424223521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "prompts", force: :cascade do |t|
+    t.string   "type_of",               default: 'unassigned'
+    t.text     "content"
+    t.string   "status",                default: 'upcomming'
+    t.string   "theme"
+    t.datetime "due_date"
+    t.datetime "voting_closed"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
