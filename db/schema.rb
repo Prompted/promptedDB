@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20170424223521) do
   enable_extension "plpgsql"
 
   create_table "prompts", force: :cascade do |t|
-    t.string   "type_of",               default: 'unassigned'
+    t.string   "type_of"
     t.text     "content"
-    t.string   "status",                default: 'upcomming'
+    t.string   "status"
     t.string   "theme"
     t.datetime "due_date"
     t.datetime "voting_closed"
