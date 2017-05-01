@@ -4,17 +4,20 @@ json.prompts do
     json.theme          @daily.theme
     json.due_date       @daily.due_date.utc.strftime("Midnight EST on %m/%d/%Y")
     json.voting_closed  @daily.voting_closed.utc.strftime("Midnight EST on %m/%d/%Y")
+    json.submissions    "200"
   end
   json.weekly do
     json.content        @weekly.content
     json.theme          @weekly.theme
     json.due_date       @weekly.due_date.utc.strftime("Midnight EST on %m/%d/%Y")
     json.voting_closed  @weekly.voting_closed.utc.strftime("Midnight EST on %m/%d/%Y")
+    json.submissions    "472"
   end
   json.montly do
     json.content        @monthly.content
     json.theme          @monthly.theme
     json.due_date       @monthly.due_date.utc.strftime("Midnight EST on %m/%d/%Y")
     json.voting_closed  @monthly.voting_closed.utc.strftime("Midnight EST on %m/%d/%Y")
+    json.submissions    "969"
   end
 end
