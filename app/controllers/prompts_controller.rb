@@ -1,4 +1,5 @@
 class PromptsController < ApplicationController
+  before_action :set_format
 
   def current
     @daily = Prompt.where(type_of: 'daily', status: 'open').first
