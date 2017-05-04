@@ -4,8 +4,8 @@ class CreateSubmissions < ActiveRecord::Migration[5.0]
       t.string :type_of
       t.string :url
       t.datetime :submitted_at
-      t.boolean :flagged_as_inappropriate
-      t.string :audience_flag
+      t.boolean :flagged_as_inappropriate,    default: false
+      t.string :audience_flag,                default: "all"
       t.belongs_to :user, foreign_key: true
       t.belongs_to :prompt, foreign_key: true
     end

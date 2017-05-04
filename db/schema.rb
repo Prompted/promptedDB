@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20170504235127) do
     t.string   "type_of"
     t.string   "url"
     t.datetime "submitted_at"
-    t.boolean  "flagged_as_inappropriate"
-    t.string   "audience_flag"
+    t.boolean  "flagged_as_inappropriate",    default: false
+    t.string   "audience_flag",               default: "all"
     t.integer  "user_id"
     t.integer  "prompt_id"
     t.index ["prompt_id"], name: "index_submissions_on_prompt_id", using: :btree
