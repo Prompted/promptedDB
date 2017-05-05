@@ -1,0 +1,9 @@
+<h4>Add a Prompt</h4>
+<%= bootstrap_form_for @prompt, url: '/admins/prompt/create' do |f| %>
+  <%= f.text_area :content, label: "Content" %>
+  <%= f.select :type_of, [["Unassigned", "unassigned"], ["Daily", "daily"], ["Weekly", "weekly"], ["Monthly", "monthly"]], { label: "Type" }, { class: "selectpicker" } %>
+  <%= f.text_field :theme, label: "Theme (optional)" %>
+  <!-- <%= f.date_select :due_date, label: "Due Date" %> -->
+
+  <button class="btn btn-primary btn-sm">Submit</button>
+<% end %>
