@@ -6,6 +6,8 @@ class Prompt < ApplicationRecord
   #validates_presence_of :voting_closed
   validate :can_only_be_open_if_duedate_and_votingclosed_are_set
 
+  has_many :submissions
+
 
   def can_only_be_open_if_duedate_and_votingclosed_are_set
     if self.status == 'open' && (!self.due_date.present? || !self.voting_closed.present?)
