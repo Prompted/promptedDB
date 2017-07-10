@@ -21,7 +21,7 @@ require 'pry'
 # binding.pry
 
 
-resp = HTTParty.post("http://localhost:3000/submissions/new",
-    :query => { :type_of => "text",
-                :url => "www.longwebaddress.com/mystory.txt"})
+resp = HTTParty.post("http://localhost:3000/submissions/create",
+    :query => { :type_of => "image",
+                :url => "www.longwebaddress.com/myimage.png"})
 binding.pry

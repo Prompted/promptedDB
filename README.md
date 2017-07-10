@@ -3,7 +3,7 @@
 "Share your passion"
 
 ## To add submission
-####POST "https://prompted-db.herokuapp.com/submissions/create"
+#### POST "https://prompted-db.herokuapp.com/submissions/create"
 
 **request**
 
