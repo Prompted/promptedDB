@@ -1,16 +1,18 @@
-class Submissions::PromptsController < ApplicationController
+class SubmissionsController < ApplicationController
 
   def index
 
   end
 
   def create
-    if prompt_id = params(prompt_id)
-      prompt = Prompt.find(prompt_id)
-      submission = Submission.new(approved_params, user = current_user, prompt = prompt, submitted_at = Time.now)
-    else
-      submission = Submission.new(approved_params, user = current_user, submitted_at = Time.now)
+    current_user = User.first
+    submission = Submission.new(approved_params)
+    submission.user = current_user
+    submission.submitted_at = Time.now
+    if prompt_id = params["prompt_id"]
+      submission.prompt = Prompt.find(prompt_id)
     end
+
     if submission.save
       respond_to do |format|
         format.json { render json: { status: "Success"} }

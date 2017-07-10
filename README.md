@@ -1,3 +1,23 @@
-# README
+# Prompted-db!
+## The REST json API for [Prompted](https://watchparty.online)!
+"Share your passion"
 
-This will up updated as needed
+## To add submission
+####POST "https://prompted-db.herokuapp.com/submissions/create"
+
+**request**
+
+             {
+                type_of: "text/video/audio/image",
+                url: "www.longwebaddress.com/mystory.txt",
+                audience_flag: "adult", (optional, default set to "all")
+                prompt_id: 12 (optional)
+              }
+
+**response**
+
+                status: "Success"
+
+                or
+
+                status: "Unable to save submission"

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#readme'
   get '/prompts/active' => 'prompts#active'
-  post '/submissions/new' => 'submissions#create'
+  post '/submissions/create' => 'submissions#create'
 
   #routes for admin site
   get '/admins/admin/:id' => 'admins#show'
