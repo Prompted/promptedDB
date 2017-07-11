@@ -32,7 +32,7 @@ class SubmissionsController < ApplicationController
   private
 
   def approved_params
-    params.permit(:url, :type_of, :audience_flag)
+    params.permit(:url, :type_of, :audience_flag, :title)
   end
 
 end

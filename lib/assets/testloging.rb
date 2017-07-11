@@ -21,7 +21,8 @@ require 'pry'
 # binding.pry
 
 
-resp = HTTParty.post("http://localhost:3000/submissions/create",
+resp = HTTParty.post("http://Prompted-db.herokuapp.com/submissions/create",
     :query => { :type_of => "image",
-                :url => "www.longwebaddress.com/myimage.png"})
+                :url => "www.longwebaddress.com/myimage.png",
+                :title => "My Doge Taking a Poop #4"})
 binding.pry
