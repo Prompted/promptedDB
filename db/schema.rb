@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505002132) do
+ActiveRecord::Schema.define(version: 20170710223358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170505002132) do
     t.string   "audience_flag",            default: "all"
     t.integer  "user_id"
     t.integer  "prompt_id"
+    t.string   "title"
     t.index ["prompt_id"], name: "index_submissions_on_prompt_id", using: :btree
     t.index ["user_id"], name: "index_submissions_on_user_id", using: :btree
   end

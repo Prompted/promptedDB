@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'home#readme'
   get '/prompts/active' => 'prompts#active'
   post '/submissions/create' => 'submissions#create'
+  get '/submissions/userindex' => 'submissions#user_index'
+  get '/submissions/index' => 'submissions#index'
 
   #routes for admin site
   get '/admins/admin/:id' => 'admins#show'

@@ -1,7 +1,12 @@
 class SubmissionsController < ApplicationController
 
   def index
+    @all_submissions = Submission.all
+  end
 
+  def user_index
+    current_user = User.first
+    @my_submissions = current_user.submissions
   end
 
   def create
