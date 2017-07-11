@@ -10,6 +10,7 @@
              {
                 type_of: "text/video/audio/image",
                 url: "www.longwebaddress.com/mystory.txt",
+                title: "Something",
                 audience_flag: "adult", (optional, default set to "all")
                 prompt_id: 12 (optional)
               }

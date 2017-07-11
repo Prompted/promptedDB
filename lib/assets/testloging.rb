@@ -22,7 +22,7 @@ require 'pry'
 
 
 resp = HTTParty.post("http://Prompted-db.herokuapp.com/submissions/create",
-    :query => { :type_of => "image",
-                :url => "www.longwebaddress.com/myimage.png",
-                :title => "My Doge Taking a Poop #4"})
+    :query => { :type_of => "video",
+                :url => "www.longwebaddress.com/myvideo.avi",
+                :title => "Jackass Tryouts"})
 binding.pry
