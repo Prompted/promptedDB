@@ -1,5 +1,5 @@
 # Prompted-db!
-## The REST json API for [Prompted](https://watchparty.online)!
+## The REST json API for [Wipzie](https://wipzie-13e17.firebaseapp.com/)!
 "Share your passion"
 
 ## To add submission
